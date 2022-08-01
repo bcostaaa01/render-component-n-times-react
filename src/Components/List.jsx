@@ -4,6 +4,15 @@ const List = () => {
   const [inputElementsToAdd, setElementsToAdd] = useState(1);
   const [commitedElementsToAdd, setCommitedElementsToAdd] = useState(0);
 
+  const Image = () => (
+    <>
+    <img
+          src={"https://miro.medium.com/max/220/1*C351fbWRMQTvLkCbZtuEHw.png"}
+          alt="stone-component"
+        />
+    </>
+  )
+
   const ListComp = ({ id }) => (
     <>
       <ul>
@@ -32,7 +41,7 @@ const List = () => {
         Add elements
       </button>
       {[...Array(commitedElementsToAdd)].map(() => (
-        <ListComp />
+        <Image />
       ))}
     </div>
   );
